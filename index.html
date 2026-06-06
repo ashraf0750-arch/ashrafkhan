@@ -158,88 +158,290 @@
         </div>
     </section>
 
-    <!-- 5. STYLISH COURSE MARKETPLACE -->
+    <!-- 5. STYLISH COURSE MARKETPLACE (UPDATED WITH INTERACTIVE CLASS GROUPS) -->
     <section id="courses" class="max-w-7xl mx-auto px-6 py-16">
-        <div class="mb-12">
+        <div class="mb-12 text-center md:text-left">
             <h2 class="text-4xl font-extrabold text-white">Ashraf's Curated <span class="gradient-text">Programs</span></h2>
-            <p class="text-gray-400 mt-2">Premium educational frameworks structured for ultimate career growth. Select a program to enroll via WhatsApp.</p>
+            <p class="text-gray-400 mt-2">Premium educational frameworks structured for ultimate career growth. Select your class group to explore subjects and enroll.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Course Card 1 -->
-            <div class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 flex flex-col justify-between">
-                <div>
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="School Academic Excellence" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#070a13] to-transparent"></div>
-                        <span class="absolute top-4 left-4 bg-sky-500 text-black text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Class 1 to 12</span>
+        <!-- MAIN GRID: ACADEMICS + SKILLS + EARNING -->
+        <div class="grid lg:grid-cols-3 gap-8 items-start">
+            
+            <!-- GROUP 1: ACADEMICS (CLASS 1 TO 12 INTERACTIVE DROP-DOWNS) -->
+            <div class="lg:col-span-2 glass-card rounded-3xl p-6 md:p-8 border border-gray-800/80 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-sky-500/5 blur-[80px] rounded-full pointer-events-none"></div>
+                
+                <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-gray-800/60 pb-6 mb-6 gap-4">
+                    <div>
+                        <span class="bg-gradient-to-r from-sky-500 to-indigo-500 text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Comprehensive Schooling</span>
+                        <h3 class="text-2xl font-bold text-white mt-2">School Academic Excellence</h3>
+                        <p class="text-gray-400 text-sm mt-1">Foundational to Board Exam Masterclasses.</p>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white group-hover:text-sky-400 transition-colors">School Academic Excellence</h3>
-                        <p class="text-gray-400 text-sm mt-2 leading-relaxed">Master every school subject from core foundational concepts to board exam preparations, and secure the top ranks in your academic journey.</p>
-                    </div>
+                    <span class="text-xs text-emerald-400 font-medium flex items-center gap-1.5 bg-emerald-950/30 border border-emerald-800/40 px-3 py-1.5 rounded-xl self-start md:self-auto">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> UPI Enrollment Live
+                    </span>
                 </div>
-                <div class="p-6 pt-0">
-                    <div class="pt-4 border-t border-gray-800 flex flex-col gap-3">
-                        <span class="text-xs text-emerald-400 font-medium flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Direct UPI Enrollment Available
-                        </span>
-                        <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20the%20'School%20Academic%20Excellence'%20program.%20Please%20send%20me%20the%20payment%20QR%20code." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-center text-xs font-bold py-3 rounded-xl transition-all whatsapp-glow flex items-center justify-center gap-2">
-                            <span>Enroll Now (Via WhatsApp)</span>
-                        </a>
+
+                <!-- ACADEMIC SUB-GROUPS ACCORDION -->
+                <div class="space-y-4">
+                    
+                    <!-- A. PRIMARY SECTION (CLASSES 1 - 5) -->
+                    <div class="border border-gray-800/40 rounded-2xl bg-slate-950/30 overflow-hidden">
+                        <div class="bg-slate-950/60 px-5 py-4 border-b border-gray-800/40">
+                            <h4 class="text-sm font-bold tracking-wider text-sky-400 uppercase">// Primary School (Class 1 - 5)</h4>
+                        </div>
+                        <div class="p-4 flex flex-col gap-3">
+                            <!-- Class 1 -->
+                            <details class="group bg-[#0d111c] border border-gray-800 rounded-xl transition-all duration-300">
+                                <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-gray-200 hover:text-white list-none">
+                                    <div class="flex items-center gap-3">
+                                        <span class="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center font-bold text-xs">01</span>
+                                        <span>Class 1st Standard</span>
+                                    </div>
+                                    <span class="text-gray-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-800/50 bg-[#090d16] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                    <p class="text-xs text-gray-400 leading-relaxed"><strong>Subjects:</strong> Mathematics, Environmental Studies (EVS), English Grammar, Hindi Language, & Basic Rhymes/Moral Science.</p>
+                                    <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%201st%20Academic%20Program." target="_blank" class="whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-4 py-2 rounded-lg text-center shadow-md transition-all">Enroll Class 1</a>
+                                </div>
+                            </details>
+                            
+                            <!-- Class 2 -->
+                            <details class="group bg-[#0d111c] border border-gray-800 rounded-xl transition-all duration-300">
+                                <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-gray-200 hover:text-white list-none">
+                                    <div class="flex items-center gap-3">
+                                        <span class="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center font-bold text-xs">02</span>
+                                        <span>Class 2nd Standard</span>
+                                    </div>
+                                    <span class="text-gray-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-800/50 bg-[#090d16] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                    <p class="text-xs text-gray-400 leading-relaxed"><strong>Subjects:</strong> Advanced Mathematics, General Science Basics, English Literature, Creative Writing, & Hindi Grammar.</p>
+                                    <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%202nd%20Academic%20Program." target="_blank" class="whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-4 py-2 rounded-lg text-center shadow-md transition-all">Enroll Class 2</a>
+                                </div>
+                            </details>
+
+                            <!-- Class 3 -->
+                            <details class="group bg-[#0d111c] border border-gray-800 rounded-xl transition-all duration-300">
+                                <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-gray-200 hover:text-white list-none">
+                                    <div class="flex items-center gap-3">
+                                        <span class="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center font-bold text-xs">03</span>
+                                        <span>Class 3rd Standard</span>
+                                    </div>
+                                    <span class="text-gray-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-800/50 bg-[#090d16] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                    <p class="text-xs text-gray-400 leading-relaxed"><strong>Subjects:</strong> Mathematics (Fractions & Word Problems), Science, Social Studies Intro, English Prose, & Computer Foundations.</p>
+                                    <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%203rd%20Academic%20Program." target="_blank" class="whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-4 py-2 rounded-lg text-center shadow-md transition-all">Enroll Class 3</a>
+                                </div>
+                            </details>
+
+                            <!-- Class 4 -->
+                            <details class="group bg-[#0d111c] border border-gray-800 rounded-xl transition-all duration-300">
+                                <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-gray-200 hover:text-white list-none">
+                                    <div class="flex items-center gap-3">
+                                        <span class="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center font-bold text-xs">04</span>
+                                        <span>Class 4th Standard</span>
+                                    </div>
+                                    <span class="text-gray-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-800/50 bg-[#090d16] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                    <p class="text-xs text-gray-400 leading-relaxed"><strong>Subjects:</strong> Advanced EVS, Mathematics (Geometry Basics), English Comprehension, Hindi Composition, & GK.</p>
+                                    <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%204th%20Academic%20Program." target="_blank" class="whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-4 py-2 rounded-lg text-center shadow-md transition-all">Enroll Class 4</a>
+                                </div>
+                            </details>
+
+                            <!-- Class 5 -->
+                            <details class="group bg-[#0d111c] border border-gray-800 rounded-xl transition-all duration-300">
+                                <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-gray-200 hover:text-white list-none">
+                                    <div class="flex items-center gap-3">
+                                        <span class="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center font-bold text-xs">05</span>
+                                        <span>Class 5th Standard</span>
+                                    </div>
+                                    <span class="text-gray-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-800/50 bg-[#090d16] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                    <p class="text-xs text-gray-400 leading-relaxed"><strong>Subjects:</strong> Applied Mathematics, General Environmental Sciences, English Literature, Hindi Sahitya, & Elementary Coding Concept.</p>
+                                    <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%205th%20Academic%20Program." target="_blank" class="whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-4 py-2 rounded-lg text-center shadow-md transition-all">Enroll Class 5</a>
+                                </div>
+                            </details>
+                        </div>
                     </div>
+
+                    <!-- B. MIDDLE SCHOOL SECTION (CLASSES 6 - 8) -->
+                    <div class="border border-gray-800/40 rounded-2xl bg-slate-950/30 overflow-hidden">
+                        <div class="bg-slate-950/60 px-5 py-4 border-b border-gray-800/40">
+                            <h4 class="text-sm font-bold tracking-wider text-violet-400 uppercase">// Middle School (Class 6 - 8)</h4>
+                        </div>
+                        <div class="p-4 flex flex-col gap-3">
+                            <!-- Class 6 -->
+                            <details class="group bg-[#0d111c] border border-gray-800 rounded-xl transition-all duration-300">
+                                <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-gray-200 hover:text-white list-none">
+                                    <div class="flex items-center gap-3">
+                                        <span class="w-8 h-8 rounded-lg bg-violet-500/10 border border-violet-500/30 text-violet-400 flex items-center justify-center font-bold text-xs">06</span>
+                                        <span>Class 6th Standard</span>
+                                    </div>
+                                    <span class="text-gray-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-800/50 bg-[#090d16] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                    <p class="text-xs text-gray-400 leading-relaxed"><strong>Subjects:</strong> Mathematics, Physics, Chemistry, Biology, History & Civics, Geography, English Core, & Hindi.</p>
+                                    <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%206th%20Academic%20Program." target="_blank" class="whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-4 py-2 rounded-lg text-center shadow-md transition-all">Enroll Class 6</a>
+                                </div>
+                            </details>
+
+                            <!-- Class 7 -->
+                            <details class="group bg-[#0d111c] border border-gray-800 rounded-xl transition-all duration-300">
+                                <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-gray-200 hover:text-white list-none">
+                                    <div class="flex items-center gap-3">
+                                        <span class="w-8 h-8 rounded-lg bg-violet-500/10 border border-violet-500/30 text-violet-400 flex items-center justify-center font-bold text-xs">07</span>
+                                        <span>Class 7th Standard</span>
+                                    </div>
+                                    <span class="text-gray-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-800/50 bg-[#090d16] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                    <p class="text-xs text-gray-400 leading-relaxed"><strong>Subjects:</strong> Pre-Algebra Mathematics, Integrated Science, History/Geography Modules, English Literature, & Advanced Grammar.</p>
+                                    <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%207th%20Academic%20Program." target="_blank" class="whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-4 py-2 rounded-lg text-center shadow-md transition-all">Enroll Class 7</a>
+                                </div>
+                            </details>
+
+                            <!-- Class 8 -->
+                            <details class="group bg-[#0d111c] border border-gray-800 rounded-xl transition-all duration-300">
+                                <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-gray-200 hover:text-white list-none">
+                                    <div class="flex items-center gap-3">
+                                        <span class="w-8 h-8 rounded-lg bg-violet-500/10 border border-violet-500/30 text-violet-400 flex items-center justify-center font-bold text-xs">08</span>
+                                        <span>Class 8th Standard</span>
+                                    </div>
+                                    <span class="text-gray-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-800/50 bg-[#090d16] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                    <p class="text-xs text-gray-400 leading-relaxed"><strong>Subjects:</strong> Advanced Mathematics, High-School Prep Physics & Chemistry, Social Sciences, English Writing, & Computer Literacy.</p>
+                                    <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%208th%20Academic%20Program." target="_blank" class="whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-4 py-2 rounded-lg text-center shadow-md transition-all">Enroll Class 8</a>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- C. HIGH SCHOOL & BOARDS (CLASSES 9 - 12) -->
+                    <div class="border border-gray-800/40 rounded-2xl bg-slate-950/30 overflow-hidden">
+                        <div class="bg-slate-950/60 px-5 py-4 border-b border-gray-800/40">
+                            <h4 class="text-sm font-bold tracking-wider text-amber-500 uppercase">// Senior Secondary & Boards (Class 9 - 12)</h4>
+                        </div>
+                        <div class="p-4 flex flex-col gap-3">
+                            <!-- Class 9 -->
+                            <details class="group bg-[#0d111c] border border-gray-800 rounded-xl transition-all duration-300">
+                                <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-gray-200 hover:text-white list-none">
+                                    <div class="flex items-center gap-3">
+                                        <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center font-bold text-xs">09</span>
+                                        <span>Class 9th Standard</span>
+                                    </div>
+                                    <span class="text-gray-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-800/50 bg-[#090d16] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                    <p class="text-xs text-gray-400 leading-relaxed"><strong>Subjects:</strong> Board-Foundation Mathematics, Physics, Chemistry, Biology, History, Civics, Economics, Geography, English Language & Literature.</p>
+                                    <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%209th%20Academic%20Program." target="_blank" class="whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-4 py-2 rounded-lg text-center shadow-md transition-all">Enroll Class 9</a>
+                                </div>
+                            </details>
+
+                            <!-- Class 10 -->
+                            <details class="group bg-[#0d111c] border border-gray-800 rounded-xl transition-all duration-300">
+                                <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-gray-200 hover:text-white list-none">
+                                    <div class="flex items-center gap-3">
+                                        <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center font-bold text-xs">10</span>
+                                        <span>Class 10th (Board Special)</span>
+                                    </div>
+                                    <span class="text-gray-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-800/50 bg-[#090d16] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                    <p class="text-xs text-orange-300 leading-relaxed"><strong>🔥 Board BootCamp:</strong> Full syllabus crash course, previous year papers (PYQs) analysis, customized notes for Math, Science, and Social Studies.</p>
+                                    <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%2010th%20Board%20Program." target="_blank" class="whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-4 py-2 rounded-lg text-center shadow-md transition-all">Enroll Class 10</a>
+                                </div>
+                            </details>
+
+                            <!-- Class 11 -->
+                            <details class="group bg-[#0d111c] border border-gray-800 rounded-xl transition-all duration-300">
+                                <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-gray-200 hover:text-white list-none">
+                                    <div class="flex items-center gap-3">
+                                        <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center font-bold text-xs">11</span>
+                                        <span>Class 11th Standard</span>
+                                    </div>
+                                    <span class="text-gray-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-800/50 bg-[#090d16] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                    <p class="text-xs text-gray-400 leading-relaxed"><strong>Streams Available:</strong> Science Stream (PCM/PCB Core Concepts), Commerce (Accountancy, Business Studies), & Premium Humanities Modules.</p>
+                                    <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%2011th%20Academic%20Program." target="_blank" class="whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-4 py-2 rounded-lg text-center shadow-md transition-all">Enroll Class 11</a>
+                                </div>
+                            </details>
+
+                            <!-- Class 12 -->
+                            <details class="group bg-[#0d111c] border border-gray-800 rounded-xl transition-all duration-300">
+                                <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-gray-200 hover:text-white list-none">
+                                    <div class="flex items-center gap-3">
+                                        <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center font-bold text-xs">12</span>
+                                        <span>Class 12th (Ultimate Boards)</span>
+                                    </div>
+                                    <span class="text-gray-500 group-open:rotate-180 transition-transform text-xs">▼</span>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-800/50 bg-[#090d16] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                    <p class="text-xs text-orange-300 leading-relaxed"><strong>🎯 Ultimate Board Elite:</strong> Intensive stream-wise mentorship for 12th Board examinations, strategic numerical cracking sessions, and sample papers.</p>
+                                    <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%2012th%20Board%20Program." target="_blank" class="whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-4 py-2 rounded-lg text-center shadow-md transition-all">Enroll Class 12</a>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- Course Card 2 -->
-            <div class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 flex flex-col justify-between">
-                <div>
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?auto=format&fit=crop&w=600&q=80" alt="Advanced Reading Skills" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#070a13] to-transparent"></div>
-                        <span class="absolute top-4 left-4 bg-violet-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Skills</span>
+            <!-- RIGHT COLUMN: SKILLS + EARNING CARDS -->
+            <div class="space-y-8 lg:col-span-1">
+                
+                <!-- Course Card 2: Advanced Reading Skills -->
+                <div class="glass-card rounded-3xl overflow-hidden group transition-all duration-300 flex flex-col justify-between border border-gray-800/80">
+                    <div>
+                        <div class="h-44 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?auto=format&fit=crop&w=600&q=80" alt="Advanced Reading Skills" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-60">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#070a13] to-transparent"></div>
+                            <span class="absolute top-4 left-4 bg-violet-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Skills</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white group-hover:text-violet-400 transition-colors">Advanced Reading Skills</h3>
+                            <p class="text-gray-400 text-sm mt-2 leading-relaxed">Develop speed reading habits, achieve higher comprehension rates, and stay ahead of the curve.</p>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white group-hover:text-violet-400 transition-colors">Advanced Reading Skills</h3>
-                        <p class="text-gray-400 text-sm mt-2 leading-relaxed">Develop speed reading habits, achieve higher comprehension rates, and stay ahead of the curve by mastering advanced language reading patterns.</p>
+                    <div class="p-6 pt-0">
+                        <div class="pt-4 border-t border-gray-800 flex flex-col gap-3">
+                            <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in the%20'Advanced%20Reading%20Skills'%20program." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-center text-xs font-bold py-3 rounded-xl transition-all whatsapp-glow flex items-center justify-center gap-2">
+                                <span>Enroll Now (Via WhatsApp)</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="p-6 pt-0">
-                    <div class="pt-4 border-t border-gray-800 flex flex-col gap-3">
-                        <span class="text-xs text-emerald-400 font-medium flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Direct UPI Enrollment Available
-                        </span>
-                        <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20the%20'Advanced%20Reading%20Skills'%20program.%20Please%20send%20me%20the%20payment%20QR%20code." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-center text-xs font-bold py-3 rounded-xl transition-all whatsapp-glow flex items-center justify-center gap-2">
-                            <span>Enroll Now (Via WhatsApp)</span>
-                        </a>
+
+                <!-- Course Card 3: Digital Earning Blueprint -->
+                <div class="glass-card rounded-3xl overflow-hidden group transition-all duration-300 flex flex-col justify-between border border-gray-800/80">
+                    <div>
+                        <div class="h-44 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Modern Digital Earning Blueprint" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-60">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#070a13] to-transparent"></div>
+                            <span class="absolute top-4 left-4 bg-amber-500 text-black text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Earning</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">Modern Digital Earning Blueprint</h3>
+                            <p class="text-gray-400 text-sm mt-2 leading-relaxed">Learn how to monetize your unique skills. Dive into freelancing networks and independent online assets.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="pt-4 border-t border-gray-800 flex flex-col gap-3">
+                            <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20the%20'Modern%20Digital%20Earning%20Blueprint'%20program." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-center text-xs font-bold py-3 rounded-xl transition-all whatsapp-glow flex items-center justify-center gap-2">
+                                <span>Enroll Now (Via WhatsApp)</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-            <!-- Course Card 3 -->
-            <div class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 flex flex-col justify-between">
-                <div>
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Modern Digital Earning Blueprint" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#070a13] to-transparent"></div>
-                        <span class="absolute top-4 left-4 bg-amber-500 text-black text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Earning</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">Modern Digital Earning Blueprint</h3>
-                        <p class="text-gray-400 text-sm mt-2 leading-relaxed">Learn how to monetize your unique skills. Dive into freelancing networks, digital asset creation, and highly effective independent internet income models.</p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <div class="pt-4 border-t border-gray-800 flex flex-col gap-3">
-                        <span class="text-xs text-emerald-400 font-medium flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Direct UPI Enrollment Available
-                        </span>
-                        <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20the%20'Modern%20Digital%20Earning%20Blueprint'%20program.%20Please%20send%20me%20the%20payment%20QR%20code." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-center text-xs font-bold py-3 rounded-xl transition-all whatsapp-glow flex items-center justify-center gap-2">
-                            <span>Enroll Now (Via WhatsApp)</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
