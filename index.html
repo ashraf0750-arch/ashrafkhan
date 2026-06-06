@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduEarn Premium | Ashraf Khan</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
@@ -22,6 +20,17 @@
         .glass-card:hover {
             border-color: rgba(99, 102, 241, 0.4);
             box-shadow: 0 0 30px rgba(99, 102, 241, 0.1);
+            transform: translateY(-4px);
+        }
+        .live-card {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(7, 10, 19, 0.2) 100%);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            transition: all 0.3s ease;
+        }
+        .live-card:hover {
+            border-color: rgba(239, 68, 68, 0.6);
+            box-shadow: 0 0 35px rgba(239, 68, 68, 0.15);
             transform: translateY(-4px);
         }
         .gradient-text {
@@ -40,11 +49,16 @@
         .whatsapp-glow:hover {
             box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
         }
+        .live-glow {
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+        }
+        .live-glow:hover {
+            box-shadow: 0 0 30px rgba(239, 68, 68, 0.5);
+        }
     </style>
 </head>
 <body class="text-gray-200 min-h-screen overflow-x-hidden">
 
-    <!-- 1. NAVIGATION BAR -->
     <nav class="sticky top-0 z-50 bg-[#070a13]/80 backdrop-blur-md border-b border-gray-900 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="text-2xl font-bold tracking-wider text-white flex items-center gap-2">
@@ -63,34 +77,32 @@
         </div>
     </nav>
 
-    <!-- 2. HERO SECTION -->
     <section id="home" class="relative max-w-7xl mx-auto px-6 pt-24 pb-16 text-center">
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/10 blur-[130px] rounded-full pointer-events-none"></div>
         
-        <span class="inline-block bg-indigo-950/50 border border-indigo-500/30 text-indigo-300 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6">
-            🚀 Welcome To The Future of Learning
+        <span class="inline-block bg-red-950/40 border border-red-500/40 text-red-400 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6 animate-pulse">
+            🔴 Live Classes & Personal Mentorship Active
         </span>
         <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight max-w-5xl mx-auto">
             Learn Basic to Advance <br>With <span class="gradient-ashraf">ASHRAF KHAN</span>
         </h1>
         <p class="mt-6 text-gray-400 text-lg md:text-xl max-w-3xl mx-auto font-light">
-            A structured platform for Class 1-12 Academic Excellence, Advanced Reading Skills, and Modern Digital Earning Frameworks.
+            A structured platform for Class 1-12 Academic Excellence, Interactive Live Sessions, Advanced Reading Skills, and Modern Digital Earning Frameworks.
         </p>
         <div class="mt-10 flex flex-wrap justify-center gap-4">
+            <a href="https://meet.google.com/" target="_blank" class="bg-gradient-to-r from-red-600 to-rose-600 text-white px-8 py-4 rounded-xl font-bold hover:from-red-500 hover:to-rose-500 transition-all live-glow transform hover:-translate-y-0.5 flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
+                Join Live Class
+            </a>
             <a href="#courses" class="bg-white text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-xl transform hover:-translate-y-0.5">
                 Explore Programs
-            </a>
-            <a href="#about" class="glass-card text-white px-8 py-4 rounded-xl font-bold transition-all border border-gray-800 transform hover:-translate-y-0.5">
-                About Mentor
             </a>
         </div>
     </section>
 
-    <!-- 3. ABOUT / MENTOR SECTION -->
     <section id="about" class="max-w-7xl mx-auto px-6 py-16 relative">
         <div class="glass-card rounded-3xl p-8 md:p-14 border border-gray-800/60 relative overflow-hidden grid md:grid-cols-12 gap-8 items-center">
             
-            <!-- Left Side: Avatar -->
             <div class="md:col-span-4 flex flex-col items-center justify-center text-center border-b md:border-b-0 md:border-r border-gray-800/60 pb-8 md:pb-0 md:pr-8">
                 <div class="w-36 h-36 rounded-2xl bg-gradient-to-tr from-sky-500 via-violet-600 to-purple-500 p-1 shadow-2xl mb-4">
                     <div class="w-full h-full rounded-2xl overflow-hidden bg-slate-900">
@@ -105,30 +117,42 @@
                 <p class="text-sky-400 text-sm font-medium mt-1">Founder & Lead Mentor</p>
             </div>
 
-            <!-- Right Side: Intro Text -->
             <div class="md:col-span-8 space-y-6">
                 <div>
                     <h3 class="text-xs uppercase font-bold tracking-widest text-violet-400 mb-2">// OUR MISSION</h3>
                     <h4 class="text-2xl md:text-3xl font-bold text-white">Bridging Education with Self-Reliance.</h4>
                 </div>
                 <p class="text-gray-300 leading-relaxed text-base">
-                    "Mera mission education ko aasan banana hai. Hum yahan Class 1st se lekar 12th tak ka complete structured curriculum provide karte hain, jiske sath Advanced Reading Skills aur Modern Digital Earning ke tarike sikhaye jaate hain taaki har student future-ready ban sake."
+                    "Mera mission education ko aasan banana hai. Hum yahan Class 1st se lekar 12th tak ka complete structured curriculum provide karte hain, jiske sath Live Classes, Advanced Reading Skills aur Modern Digital Earning ke tarike sikhaye jaate hain taaki har student future-ready ban sake."
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- 4. PROGRAMS MARKETPLACE (PREMIUM GRID) -->
     <section id="courses" class="max-w-7xl mx-auto px-6 py-12">
         <div class="mb-12 text-center md:text-left">
             <h2 class="text-3xl md:text-4xl font-bold text-white">Our Curated <span class="gradient-text">Programs</span></h2>
-            <p class="text-gray-400 text-sm mt-1">Apna batch select karein aur WhatsApp ke jariye turant enroll karein.</p>
+            <p class="text-gray-400 text-sm mt-1">Apna batch select karein aur Live Class ya WhatsApp ke jariye enroll karein.</p>
         </div>
 
-        <!-- Course Cards Responsive Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- Class 1 -->
+            <div class="live-card rounded-2xl p-6 flex flex-col justify-between md:col-span-2 lg:col-span-3 border border-red-500/30">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-red-500 text-white text-[10px] font-black px-2.5 py-0.5 rounded uppercase tracking-wider animate-pulse">🔴 LIVE NOW</span>
+                            <span class="text-xs text-gray-400">Daily Interactive Session</span>
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-extrabold text-white mt-3">Ashraf Sir's Masterclass Live</h3>
+                        <p class="text-sm text-gray-400 mt-1 max-w-3xl">Directly connect with Ashraf Khan sir for doubts solving, live conceptual tracking, exam strategy, and specialized skill mastery blueprints. (Change URL in code to your Google Meet/Zoom link).</p>
+                    </div>
+                    <a href="https://meet.google.com/" target="_blank" class="w-full md:w-auto text-center bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white text-sm font-bold px-8 py-3.5 rounded-xl transition-all live-glow whitespace-nowrap self-stretch md:self-auto flex items-center justify-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-white animate-ping"></span> Enter Live Room
+                    </a>
+                </div>
+            </div>
+
             <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800/80">
                 <div>
                     <div class="flex justify-between items-start">
@@ -141,7 +165,6 @@
                 <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%201st." target="_blank" class="mt-6 text-center bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold py-2.5 rounded-lg transition-all shadow-md">Enroll Now</a>
             </div>
 
-            <!-- Class 2 -->
             <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800/80">
                 <div>
                     <div class="flex justify-between items-start">
@@ -154,7 +177,6 @@
                 <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%202nd." target="_blank" class="mt-6 text-center bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold py-2.5 rounded-lg transition-all shadow-md">Enroll Now</a>
             </div>
 
-            <!-- Class 3 -->
             <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800/80">
                 <div>
                     <div class="flex justify-between items-start">
@@ -167,7 +189,6 @@
                 <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%203rd." target="_blank" class="mt-6 text-center bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold py-2.5 rounded-lg transition-all shadow-md">Enroll Now</a>
             </div>
 
-            <!-- Class 4 -->
             <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800/80">
                 <div>
                     <div class="flex justify-between items-start">
@@ -180,7 +201,6 @@
                 <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%204th." target="_blank" class="mt-6 text-center bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold py-2.5 rounded-lg transition-all shadow-md">Enroll Now</a>
             </div>
 
-            <!-- Class 5 -->
             <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800/80">
                 <div>
                     <div class="flex justify-between items-start">
@@ -193,7 +213,6 @@
                 <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%205th." target="_blank" class="mt-6 text-center bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold py-2.5 rounded-lg transition-all shadow-md">Enroll Now</a>
             </div>
 
-            <!-- Class 6 -->
             <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800/80">
                 <div>
                     <div class="flex justify-between items-start">
@@ -206,7 +225,6 @@
                 <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%206th." target="_blank" class="mt-6 text-center bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold py-2.5 rounded-lg transition-all shadow-md">Enroll Now</a>
             </div>
 
-            <!-- Class 7 -->
             <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800/80">
                 <div>
                     <div class="flex justify-between items-start">
@@ -219,7 +237,6 @@
                 <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%207th." target="_blank" class="mt-6 text-center bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold py-2.5 rounded-lg transition-all shadow-md">Enroll Now</a>
             </div>
 
-            <!-- Class 8 -->
             <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800/80">
                 <div>
                     <div class="flex justify-between items-start">
@@ -232,7 +249,6 @@
                 <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%208th." target="_blank" class="mt-6 text-center bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold py-2.5 rounded-lg transition-all shadow-md">Enroll Now</a>
             </div>
 
-            <!-- Class 9 -->
             <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800/80">
                 <div>
                     <div class="flex justify-between items-start">
@@ -245,7 +261,6 @@
                 <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%209th." target="_blank" class="mt-6 text-center bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold py-2.5 rounded-lg transition-all shadow-md">Enroll Now</a>
             </div>
 
-            <!-- Class 10 -->
             <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800/80 bg-indigo-950/5">
                 <div>
                     <div class="flex justify-between items-start">
@@ -258,7 +273,6 @@
                 <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%2010th%20Boards." target="_blank" class="mt-6 text-center bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-2.5 rounded-lg transition-all shadow-md whatsapp-glow">Enroll Boards</a>
             </div>
 
-            <!-- Class 11 -->
             <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800/80">
                 <div>
                     <div class="flex justify-between items-start">
@@ -271,7 +285,6 @@
                 <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%2011th." target="_blank" class="mt-6 text-center bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold py-2.5 rounded-lg transition-all shadow-md">Enroll Now</a>
             </div>
 
-            <!-- Class 12 -->
             <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800/80 bg-indigo-950/5">
                 <div>
                     <div class="flex justify-between items-start">
@@ -284,7 +297,6 @@
                 <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%2012th%20Boards." target="_blank" class="mt-6 text-center bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-2.5 rounded-lg transition-all shadow-md whatsapp-glow">Enroll Boards</a>
             </div>
 
-            <!-- Advanced Reading Skills -->
             <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800/80 md:col-span-2 lg:col-span-1">
                 <div>
                     <div class="flex justify-between items-start">
@@ -297,7 +309,6 @@
                 <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Advanced%20Reading%20Skills%20Program." target="_blank" class="mt-6 text-center bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-2.5 rounded-lg transition-all whatsapp-glow">Enroll via WhatsApp</a>
             </div>
 
-            <!-- Modern Digital Earning -->
             <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800/80 md:col-span-2 lg:col-span-2 shadow-2xl">
                 <div>
                     <div class="flex justify-between items-start">
@@ -313,7 +324,6 @@
         </div>
     </section>
 
-    <!-- 5. CONTACT FORM SECTION -->
     <section id="contact" class="max-w-xl mx-auto px-6 py-12">
         <div class="glass-card rounded-2xl p-6 md:p-8 border border-gray-800/80">
             <div class="text-center mb-6">
@@ -343,7 +353,6 @@
         </div>
     </section>
 
-    <!-- 6. FOOTER -->
     <footer class="border-t border-gray-900 bg-[#04060d] mt-16 py-8 text-center text-xs text-gray-500">
         <p class="mb-2 text-gray-400 font-bold">EduEarn | Ashraf Khan</p>
         <p>© 2026 EduEarn Inc. All rights reserved.</p>
