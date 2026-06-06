@@ -15,200 +15,70 @@
             background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s ease;
         }
         .glass-card:hover {
             border-color: rgba(99, 102, 241, 0.4);
-            box-shadow: 0 0 40px rgba(99, 102, 241, 0.15);
-            transform: translateY(-4px);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.1);
+            transform: translateY(-2px);
         }
         .gradient-text {
-            background: linear-gradient(135deg, #a78bfa, #a855f7, #6366f1);
+            background: linear-gradient(135deg, #a78bfa, #6366f1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .gradient-gold {
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .gradient-ashraf {
-            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .whatsapp-glow {
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
-        }
-        .whatsapp-glow:hover {
-            box-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
-        }
-        /* Custom dynamic height transition for classes container */
+        /* Structural Dropdown Animation */
         #academic-classes-dropdown {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
-            opacity: 0;
+            display: none;
         }
         #academic-classes-dropdown.open {
-            max-height: 2000px; /* Large enough to fit content */
-            opacity: 1;
-            margin-top: 1.5rem;
+            display: block;
         }
     </style>
 </head>
-<body class="text-gray-200 min-h-screen overflow-x-hidden">
+<body class="text-gray-200 min-h-screen">
 
-    <nav class="sticky top-0 z-50 bg-[#070a13]/80 backdrop-blur-md border-b border-gray-900/80 px-6 py-4">
+    <nav class="sticky top-0 z-50 bg-[#070a13]/90 backdrop-blur-md border-b border-gray-800 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="text-2xl font-bold tracking-wider text-white flex items-center gap-2">
-                <span class="bg-gradient-to-r from-sky-500 to-violet-600 text-white px-2 py-1 rounded-lg text-sm font-extrabold">AK</span>
+                <span class="bg-indigo-600 text-white px-2 py-0.5 rounded text-sm font-black">AK</span>
                 Edu<span class="gradient-text">Earn</span>
             </div>
-            <div class="hidden md:flex space-x-8 font-medium text-gray-400">
-                <a href="#home" class="hover:text-violet-400 transition-colors">Home</a>
-                <a href="#about" class="hover:text-violet-400 transition-colors">About Ashraf</a>
-                <a href="#courses" class="hover:text-violet-400 transition-colors">Programs</a>
-                <a href="#contact" class="hover:text-violet-400 transition-colors">Contact Us</a>
+            <div class="hidden md:flex space-x-8 text-sm text-gray-400">
+                <a href="#home" class="hover:text-white transition-colors">Home</a>
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#courses" class="hover:text-white transition-colors">Programs</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
             </div>
-            <a href="https://wa.me/917460068698?text=Hi%20Ashraf%20Sir,%20I%20want%20to%20join%20the%20EduEarn%20community." target="_blank" class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-violet-900/40 transition-all transform hover:-translate-y-0.5">
+            <a href="https://wa.me/917460068698?text=Hi%20Ashraf%20Sir,%20I%20want%20to%20join%20the%20EduEarn%20community." target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-xl text-sm font-semibold transition-all">
                 Join Community
             </a>
         </div>
     </nav>
 
-    <section id="home" class="relative max-w-7xl mx-auto px-6 pt-24 pb-16 text-center">
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/10 blur-[130px] rounded-full pointer-events-none"></div>
-        
-        <span class="inline-block bg-indigo-950/50 border border-indigo-500/30 text-indigo-300 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6">
-            🚀 Welcome To The Future of Learning
-        </span>
-        <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight max-w-5xl mx-auto">
-            Learn Basic to Advance <br>With <span class="gradient-ashraf">ASHRAF KHAN</span>
+    <section id="home" class="max-w-7xl mx-auto px-6 pt-20 pb-16 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto">
+            Learn Basic to Advance <br>With <span class="text-indigo-400">ASHRAF KHAN</span>
         </h1>
-        <p class="mt-6 text-gray-400 text-lg md:text-xl max-w-3xl mx-auto font-light">
-            A comprehensive ecosystem designed for Class 1-12 Academic Excellence, Advanced Reading Skills, and Modern Digital Earning Blueprints.
+        <p class="mt-6 text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
+            A structured platform for Class 1-12 Academic Excellence, Advanced Reading Skills, and Modern Digital Earning Frameworks.
         </p>
-        <div class="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="#courses" class="bg-white text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-xl transform hover:-translate-y-0.5">
+        <div class="mt-10 flex justify-center gap-4">
+            <a href="#courses" class="bg-white text-gray-900 px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all">
                 Explore Programs
             </a>
-            <a href="#about" class="glass-card text-white px-8 py-4 rounded-xl font-bold transition-all border border-gray-800 transform hover:-translate-y-0.5">
-                Meet Your Mentor
+            <a href="#about" class="glass-card text-white px-6 py-3 rounded-xl font-bold transition-all">
+                About Mentor
             </a>
         </div>
     </section>
 
-    <section id="about" class="max-w-7xl mx-auto px-6 py-20 relative">
-        <div class="absolute right-10 top-1/2 w-80 h-80 bg-sky-500/5 blur-[100px] rounded-full pointer-events-none"></div>
-        
-        <div class="glass-card rounded-3xl p-8 md:p-14 border border-gray-800/60 relative overflow-hidden grid md:grid-cols-12 gap-8 items-center transition-all duration-300">
+    <section id="about" class="max-w-7xl mx-auto px-6 py-16">
+        <div class="glass-card rounded-2xl p-8 md:p-12 grid md:grid-cols-12 gap-8 items-center">
             
-            <div class="md:col-span-4 flex flex-col items-center justify-center text-center border-b md:border-b-0 md:border-r border-gray-800/60 pb-8 md:pb-0 md:pr-8">
-                <div class="w-36 h-36 rounded-2xl bg-gradient-to-tr from-sky-500 via-violet-600 to-purple-500 p-1 shadow-2xl shadow-sky-500/20 mb-4">
-                    <div class="w-full h-full rounded-2xl overflow-hidden bg-slate-900">
-                        <picture>
-                            <source srcset="ashraf.jpg" type="image/jpeg">
-                            <source srcset="ashraf.jpeg" type="image/jpeg">
-                            <img src="ashraf" alt="Ashraf Khan" class="w-full h-full object-cover object-top">
-                        </picture>
-                    </div>
-                </div>
-                <h2 class="text-2xl font-extrabold text-white">ASHRAF KHAN</h2>
-                <p class="text-sky-400 text-sm font-medium mt-1">Founder & Lead Educator</p>
-                
-                <div class="mt-6 flex flex-wrap gap-2 justify-center">
-                    <span class="bg-gray-900/60 text-gray-400 text-[11px] font-semibold px-3 py-1 rounded-full border border-gray-800">#Education</span>
-                    <span class="bg-gray-900/60 text-gray-400 text-[11px] font-semibold px-3 py-1 rounded-full border border-gray-800">#Earning</span>
-                    <span class="bg-gray-900/60 text-gray-400 text-[11px] font-semibold px-3 py-1 rounded-full border border-gray-800">#Mentor</span>
-                </div>
-            </div>
-
-            <div class="md:col-span-8 space-y-6">
-                <div>
-                    <h3 class="text-xs uppercase font-bold tracking-widest text-violet-400 mb-2">// OUR MISSION</h3>
-                    <h4 class="text-2xl md:text-3xl font-bold text-white">From Education to Self-Reliance.</h4>
-                </div>
-                
-                <p class="text-gray-300 leading-relaxed text-base">
-                    "My vision is to bridge the gap between traditional schooling and modern financial literacy. Whether you are a school student striving to top your exams or an aspiring creator wanting to build an online income stream, I am here to guide you step-by-step from foundational concepts to advanced masterclasses."
-                </p>
-
-                <div class="bg-slate-950/40 p-5 rounded-xl border border-gray-800/60 border-l-4 border-l-sky-500">
-                    <p class="text-gray-400 text-sm italic leading-relaxed">
-                        <strong class="text-white block not-italic mb-1 font-semibold">Our Philosophy:</strong>
-                        "I firmly believe that education should not just be about earning a degree, but about becoming self-reliant. On this platform, you will get access to a <span class="text-sky-400">complete basic-to-advance curriculum for Classes 1 to 12</span>, alongside specialized training in <span class="text-violet-400">Advanced Reading Skills</span> and <span class="text-amber-400">Digital Earning strategies</span> to secure your future."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-6xl mx-auto px-6 py-8 my-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center border-y border-gray-900/60 bg-[#090d1a]">
-        <div>
-            <h3 class="text-3xl font-extrabold text-white">Class 1-12</h3>
-            <p class="text-gray-500 text-sm mt-1">Complete Education</p>
-        </div>
-        <div>
-            <h3 class="text-3xl font-extrabold gradient-text">Basic to Adv</h3>
-            <p class="text-gray-500 text-sm mt-1">Structured Learning</p>
-        </div>
-        <div>
-            <h3 class="text-3xl font-extrabold text-white">Reading</h3>
-            <p class="text-gray-500 text-sm mt-1">Skill Development</p>
-        </div>
-        <div>
-            <h3 class="text-3xl font-extrabold gradient-gold">Earning</h3>
-            <p class="text-gray-500 text-sm mt-1">Monetization Training</p>
-        </div>
-    </section>
-
-    <section id="courses" class="max-w-7xl mx-auto px-6 py-16">
-        <div class="mb-12 text-center md:text-left">
-            <h2 class="text-4xl font-extrabold text-white">Ashraf's Curated <span class="gradient-text">Programs</span></h2>
-            <p class="text-gray-400 mt-2">Premium educational frameworks structured for ultimate career growth. Select your class group to explore subjects and enroll.</p>
-        </div>
-
-        <div class="grid lg:grid-cols-3 gap-8 items-start">
-            
-            <div class="lg:col-span-2 glass-card rounded-3xl p-6 md:p-8 border border-gray-800/80 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-sky-500/5 blur-[80px] rounded-full pointer-events-none"></div>
-                
-                <div onclick="toggleAcademicDropdown()" class="flex flex-col md:flex-row md:items-center justify-between border-b border-gray-800/60 pb-6 mb-2 gap-4 cursor-pointer group/header select-none">
-                    <div>
-                        <span class="bg-gradient-to-r from-sky-500 to-indigo-500 text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Comprehensive Schooling</span>
-                        <h3 class="text-2xl font-bold text-white mt-2 group-hover/header:text-sky-400 transition-colors flex items-center gap-2">
-                            School Academic Excellence 
-                            <span id="main-dropdown-arrow" class="text-sm text-gray-500 transition-transform duration-300">▼ (Click to Open)</span>
-                        </h3>
-                        <p class="text-gray-400 text-sm mt-1">Foundational to Board Exam Masterclasses (Class 1st to 12th).</p>
-                    </div>
-                    <span class="text-xs text-emerald-400 font-medium flex items-center gap-1.5 bg-emerald-950/30 border border-emerald-800/40 px-3 py-1.5 rounded-xl self-start md:self-auto">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> UPI Enrollment Live
-                    </span>
-                </div>
-
-                <div id="academic-classes-dropdown" class="space-y-4">
-                    
-                    <div class="border border-gray-800/40 rounded-2xl bg-slate-950/30 overflow-hidden">
-                        <div class="bg-slate-950/60 px-5 py-4 border-b border-gray-800/40">
-                            <h4 class="text-sm font-bold tracking-wider text-sky-400 uppercase">// Primary School (Class 1 - 5)</h4>
-                        </div>
-                        <div class="p-4 flex flex-col gap-3">
-                            <details class="group bg-[#0d111c] border border-gray-800 rounded-xl transition-all duration-300">
-                                <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-gray-200 hover:text-white list-none">
-                                    <div class="flex items-center gap-3">
-                                        <span class="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center font-bold text-xs">01</span>
-                                        <span>Class 1st Standard</span>
-                                    </div>
-                                    <span class="text-gray-500 group-open:rotate-180 transition-transform text-xs">▼</span>
-                                </summary>
-                                <div class="px-4 pb-4 pt-2 border-t border-gray-800/50 bg-[#090d16] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                                    <p class="text-xs text-gray-400 leading-relaxed"><strong>Subjects:</strong> Mathematics, Environmental Studies (EVS), English Grammar, Hindi Language, & Basic Rhymes/Moral Science.</p>
-                                    <a href="https://wa.me/917460068698?text=Hello%20Ashraf%20Sir,%20I%20want%20to%20enroll%20in%20Class%201st%20Academic%20Program." target="_blank" class="whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-4 py-2 rounded-lg text-center shadow-md transition-all">Enroll Class 1</a>
-                                </div>
-                            </details>
-                            
-                            <details class="group bg-[#0d111c] border border-gray-800 rounded-xl transition-all duration-300">
-                                <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-gray-200 hover:text-white list-none">
-                                    <div class="flex items-center gap-3">
-                                        <span class="
+            <div class="md:col-span-4 flex flex-col items-center text-center">
+                <div class="w-32 h-32 rounded-full overflow-hidden bg-slate-800 border-2 border-indigo-500 mb-4 shadow-xl">
+                    <picture>
+                        <source srcset="ashraf.jpg" type="image/jpeg">
+                        <source srcset="ashraf.jpeg" type="image/jpeg">
+                        <img src="ashraf" alt="Ashraf Khan" class="w-full h-full object-cover object-top">
