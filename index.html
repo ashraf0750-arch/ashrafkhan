@@ -100,9 +100,69 @@
         .live-glow:hover {
             box-shadow: 0 0 30px rgba(239, 68, 68, 0.4);
         }
+
+        /* 🎬 WELCOME ANIMATIONS STYLE */
+        @keyframes slideDown {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes zoomInPop {
+            0% { transform: scale(0.6); opacity: 0; }
+            70% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.6); }
+        }
+        .anim-welcome {
+            animation: slideDown 1s ease-out forwards;
+        }
+        .anim-congratulations {
+            animation: zoomInPop 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            animation-delay: 0.3s;
+            opacity: 0;
+        }
+        .anim-btn {
+            animation: zoomInPop 0.8s ease-out forwards;
+            animation-delay: 0.8s;
+            opacity: 0;
+        }
+        .btn-glow-pulse {
+            animation: pulseGlow 2s infinite;
+        }
     </style>
 </head>
 <body class="text-gray-200 min-h-screen overflow-x-hidden">
+
+    <!-- 🎬 ANIMATED WELCOME OVERLAY SCREEN -->
+    <div id="welcome-overlay" class="fixed inset-0 z-[100] bg-[#03050a] flex flex-col justify-center items-center text-center p-6 transition-all duration-700 ease-in-out">
+        <!-- Background Blur Decorative Circle -->
+        <div class="absolute w-[300px] h-[300px] bg-yellow-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-xl space-y-6 relative z-10">
+            <!-- Welcome Heading with Animation -->
+            <h1 class="anim-welcome text-4xl md:text-6xl font-black text-white tracking-wide">
+                Welcome to <span class="gradient-text">EduEarn</span>
+            </h1>
+            
+            <!-- Congratulations Text with Animation -->
+            <div class="anim-congratulations bg-white/5 border border-white/10 backdrop-blur-md px-6 py-4 rounded-2xl shadow-2xl">
+                <p class="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-yellow-300 to-amber-400">
+                    Congratulations 🎉
+                </p>
+                <p class="text-xs text-gray-400 mt-2 font-medium tracking-wide uppercase">// You are at the right place for success</p>
+            </div>
+
+            <!-- Get Started Button -->
+            <div class="anim-btn pt-4">
+                <button onclick="closeWelcomeScreen()" class="btn-glow-pulse bg-gradient-to-r from-amber-600 to-yellow-500 hover:from-amber-500 hover:to-yellow-400 text-gray-950 text-base font-black px-10 py-4 rounded-xl shadow-xl transition-all transform hover:scale-105 active:scale-95">
+                    Let's Start 🚀
+                </button>
+            </div>
+        </div>
+    </div>
+
 
     <!-- 1. NAVIGATION BAR -->
     <nav class="sticky top-0 z-50 bg-[#05070f]/80 backdrop-blur-md border-b border-gray-900 px-6 py-4">
@@ -482,6 +542,22 @@
         <p class="mb-2 text-gray-400 font-bold">EduEarn | Ashraf Khan</p>
         <p>© 2026 EduEarn Inc. All rights reserved.</p>
     </footer>
+
+    <!-- 📜 JAVASCRIPT FOR CLOSE WELCOME SCREEN ANIMATION -->
+    <script>
+        function closeWelcomeScreen() {
+            const overlay = document.getElementById('welcome-overlay');
+            // Fade out and Scale down smooth transition effect
+            overlay.style.opacity = '0';
+            overlay.style.transform = 'scale(1.1)';
+            overlay.style.pointerEvents = 'none';
+            
+            // Totally remove overlay from screen after animation ends
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 700);
+        }
+    </script>
 
 </body>
 </html>
